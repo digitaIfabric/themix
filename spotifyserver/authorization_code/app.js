@@ -11,10 +11,12 @@ let express = require('express'); // Express web server framework
 let request = require('request'); // "Request" library
 let querystring = require('querystring');
 let cookieParser = require('cookie-parser');
+let dotenv = require('dotenv');
 
-let client_id = '9396c9a7ebc6430cb446ac326404e123'; // Your client id
-let client_secret = 'f3a777382ccc4fc5add26ebea9cf42d6'; // Your secret
+let client_id = process.env.CLIENT_ID; // Your client id
+let client_secret = process.env.SECRET_KEY; // Your secret
 let redirect_uri = 'http://localhost:3003/callback'; // Your redirect uri
+
 
 /**
  * Generates a random string containing numbers and letters
