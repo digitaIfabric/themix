@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "dns": "^0.2.2",
+    "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "fetch": "^1.1.0",
     "jquery": "^3.2.1",
@@ -14,7 +15,7 @@
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "uuid": "^3.1.0",
+    "tidalapi": "^0.2.3",
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
