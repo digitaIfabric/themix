@@ -1,12 +1,16 @@
 h1.head {
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
+  text-decoration: underline;
+  font-family: 'Lobster', cursive;
   color: white;
 }
 div#card {
   border: solid #fff 2px;
-  border-radius: 50px 50px 50px;
+  border-radius: 180px 180px 180px;
+  padding: 20px;
   text-align: center;
+  background-color: #424d5e;
   vertical-align: top;
   display: inline-block;
   margin: 30px;
@@ -14,8 +18,19 @@ div#card {
   height: 250px;
   width: 250px;
 }
+#card h1 {
+  font-size: 30px;
+  padding: 20px;
+  line-height: 35px;
+}
+div.overall {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
 div#card:hover {
 transform: scale(1.1);
+background-color: #354c70;
 }
 button {
   border: solid white 2px;
