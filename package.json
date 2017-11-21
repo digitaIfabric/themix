@@ -14,7 +14,10 @@
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+<<<<<<< HEAD
     "uuid": "^3.1.0",
+=======
+>>>>>>> 4f319e5d6dbe933f3bbaa93f36f30b5fc439af80
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
