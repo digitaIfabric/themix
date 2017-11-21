@@ -38,7 +38,7 @@ class Playlist extends Component {
         <div id="card">
           <h1>{playlist.name}</h1>
           <h3>{playlist.tracks.total} Tracks</h3>
-          <a href="/showtracks"><button>View Playlists Tracks</button></a>
+          <a href="/showtracks"><button>Add to WeWork Mix</button></a>
         </div>
       )})}
     </div>
