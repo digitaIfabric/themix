@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Playlist.css';
-import Showtracks from './Showtracks'
 import uuid from 'uuid/v4';
 import axios from 'axios';
 import queryString from 'query-string';
