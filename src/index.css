@@ -688,9 +688,9 @@ body {
       color: inherit;
       display: block;
       font-weight: 700;
-      font-size: 28px;
+      font-size: 35px;
       height: 77px;
       line-height: 60px;
-      /*padding: 0 10px;*/
+      padding: 10px 0px 10px 10px;
       text-decoration: none;
     }
