@@ -53,18 +53,26 @@ class Playlist extends Component {
 
     postTracks = () => {
         const accessToken = this.state.accessToken.access_token;
-        const accessToken2 = 'BQCXSOOmIHi8ulBgII9SqCHXGwkI2uOmd8nfl4myBb8kSTOniM5vlTbCwiv2h66emCpZpwb_cFMvN-5YCQY2PGOKhJzJxPwDruGe-RM6QT0gyWimZPvEXPcTv5PqI4-JhkByO4lXTXS5rWqPRYlHIg4e9HdwUJpVuXD7FX4lr3IfHtq1JeY5t_UqZdRRb4saOtriqH2mu_cliCk55CNEgjTzCOCia4_Uu9NdMq1UOy5gxk_dtDU9hpox-kNIUd5It346VGfo9dl';
+        // const accessToken2 = 'BQCXSOOmIHi8ulBgII9SqCHXGwkI2uOmd8nfl4myBb8kSTOniM5vlTbCwiv2h66emCpZpwb_cFMvN-5YCQY2PGOKhJzJxPwDruGe-RM6QT0gyWimZPvEXPcTv5PqI4-JhkByO4lXTXS5rWqPRYlHIg4e9HdwUJpVuXD7FX4lr3IfHtq1JeY5t_UqZdRRb4saOtriqH2mu_cliCk55CNEgjTzCOCia4_Uu9NdMq1UOy5gxk_dtDU9hpox-kNIUd5It346VGfo9dl';
         const uri = 'spotify%3Atrack%3A22nyEAEM29tcBRhukR089b';
+        const postUrl = `https://api.spotify.com/v1/users/digital-fabric/playlists/2M3kZY1t1vocCub719j2qR/tracks?uris=${uri}`
         // const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
-        axios.post(`https://api.spotify.com/v1/users/digital-fabric/playlists/2M3kZY1t1vocCub719j2qR/tracks?uris=${uri}`, {headers: {'Authorization': 'Bearer ' + accessToken2}, json: true})
+        const token_type = 'Bearer'
+        axios({
+            method: 'post',
+            url: postUrl,
+            headers: { 'Authorization': `${token_type} ${accessToken}`,'Accept': 'application/json'}
+        })
             .then((res) => {
                 console.log('posted to playlist')
+                // redirect('/space');
+            }).then((res) => {
+            this.props.history.push('/space')
             })
             .catch((err) => {
-                console.log(err);
+                console.dir(err.response.data);
             })
     }
-
 
     render() {
         // This if handles the empty array of playlists at first
