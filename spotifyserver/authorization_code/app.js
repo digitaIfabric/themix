@@ -11,7 +11,9 @@ let express = require('express'); // Express web server framework
 let request = require('request'); // "Request" library
 let querystring = require('querystring');
 let cookieParser = require('cookie-parser');
-let dotenv = require('dotenv');
+require('dotenv').config();
+
+console.log("Client_ID from env: ", process.env.CLIENT_ID);
 
 let client_id = process.env.CLIENT_ID; // Your client id
 let client_secret = process.env.SECRET_KEY; // Your secret

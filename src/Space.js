@@ -45,14 +45,18 @@ class Space extends Component {
     return (
         <aside className="messenger">
           <nav className="navbar">
-            <a href="/" className="navbar-brand">The Mix</a>
+            <a href="/" className="navbar-brand">The Mixer</a>
           </nav>
           <button id="showchat">Click to show chat</button>
           <MessageList messages={this.state.messages} />
           <ChatBar pressKey={this.handleKeyPress} className="chatbarclass"/>
+        <iframe src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:1xjOLosU4CWy8M4BSlAeqJ&view=coverart"
+          width="675" height="600" frameborder="0" allowtransparency="true"></iframe>
         </aside>
-    );
+
+  );
   }
+
 }
 
 export default Space;

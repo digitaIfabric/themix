@@ -5,9 +5,9 @@ var api = new TidalAPI({
     username: process.env.TIDAL_USERNAME,
     password: process.env.TIDAL_PASSWORD,
     token: process.env.TIDAL_TOKEN,
-    username: 'your-username',
-    password: 'your-password',
-    token: 'your-token',
+    // username: '',
+    // password: '',
+    // token: '_KM2HixcUBZtmktH',
     clientVersion: '2.2.1--7',
     quality: 'Standard'
 });

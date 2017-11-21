@@ -12,7 +12,7 @@ var request = require('request').defaults({
  * @type {exports}
  * @private
  */
-var TidalAPIInfo = require('../package.json');
+var TidalAPIInfo = require('../../package.json');
 
 
 /**
