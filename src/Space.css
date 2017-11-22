@@ -1,0 +1,84 @@
+.spotify {
+  height: 100%;
+  width: 50%;
+}
+.chatbar {
+      background: black;
+      border-top: 1px solid black;
+      bottom: 0;
+      width: 50%;
+      display: flex;
+      /*padding: 5px;*/
+      position: fixed;
+    }
+
+    .chatbarmessage,
+    .chatbarusername {
+      border: 1px solid black;
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      margin: 5px;
+      padding: 0 9px;
+    }
+
+    .chatbarmessage {
+      flex: 8;
+    }
+    .messagelist {
+      background: #fff;
+    }
+    .chatbarusername {
+      flex: 2;
+    }
+
+    .message {
+      display: flex;
+      padding: 5px;
+      margin-top: 10px;
+      width: 50%
+    }
+
+    .message.system {
+      font-style: italic;
+      padding: 5px 20px;
+    }
+
+    .message-content,
+    .message-username {
+      overflow: hidden;
+      margin: 5px;
+      padding: 0 10px;
+    }
+
+    .message-content {
+      flex: 8;
+    }
+
+    .message-username {
+      flex: 2;
+      font-weight: 700;
+    }
+
+    .navbar {
+      background: black;
+      border-bottom: 1px solid black;
+      color: white;
+      font-family: 'Lobster', cursive;
+      height: 80px;
+      width: 50%;
+      /*padding: 0 10px;*/
+      position: fixed;
+      top: 0;
+    }
+
+    .navbar-brand {
+      color: inherit;
+      display: block;
+      font-weight: 700;
+      font-size: 35px;
+      height: 77px;
+      line-height: 60px;
+      padding: 10px 0px 10px 10px;
+      text-decoration: none;
+    }
