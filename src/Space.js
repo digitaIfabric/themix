@@ -16,7 +16,8 @@ class Space extends Component {
     };
   }
   componentDidMount() {
-
+    document.body.classList.remove('fullbg');
+    document.body.classList.add('spacebg');
     // Getting user info for chat
     let userId = localStorage.getItem('userId');
     let accessToken = localStorage.getItem('accessToken');
@@ -42,7 +43,7 @@ class Space extends Component {
           this.setState({messages: messages})
         break;
         default:
-          throw ('Event type unknown ' + data.type)
+
     }
   }
 }};
@@ -52,6 +53,7 @@ class Space extends Component {
     const newMessage = {
       type: 'postMessage',
       username: this.state.currentUser.name,
+      avatar: this.state.currentUser.avatar,
       content: event.target.value,
     }
     this.state.socket.send(JSON.stringify(newMessage))
@@ -59,16 +61,17 @@ class Space extends Component {
 }
   render() {
     return (
-        <aside className="messenger">
-          <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameborder="0" allowtransparency="true" title="spotifyplayer"></iframe>
+      <div>
+          <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
+        <div className="messenger">
           <nav className="navbar">
             <a className="navbar-brand">The Mixer</a>
           </nav>
           <button id="showchat">Click to show chat</button>
           <MessageList messages={this.state.messages} />
           <ChatBar pressKey={this.handleKeyPress} className="chatbarclass"/>
-        </aside>
-
+        </div>
+      </div>
   );
   }
 

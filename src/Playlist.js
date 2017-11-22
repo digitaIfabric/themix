@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Playlist.css';
-import './features.js';
 import axios from 'axios';
 import queryString from 'query-string';
 class Playlist extends Component {
@@ -15,6 +14,7 @@ class Playlist extends Component {
   }
 
   componentDidMount(){
+    document.body.classList.add('fullbg');
     // Saving the userID and the accessToken to local localStorage
 
     localStorage.setItem('userId', this.state.currentUser.userId);

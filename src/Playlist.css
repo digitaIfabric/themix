@@ -5,6 +5,9 @@ h1.head {
   font-family: 'Lobster', cursive;
   color: white;
 }
+.fullbg{
+  background-image: url('./bg.jpg');
+}
 div#card {
   border: solid #fff 2px;
   border-radius: 180px 180px 180px;

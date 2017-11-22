@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Space from './Space'
 import Home from "./Home"
 import Playlist from "./Playlist"
+import Space from './Space'
 class App extends Component {
   render() {
     return (
