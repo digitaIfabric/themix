@@ -6,12 +6,17 @@ class Space extends Component {
     super(props);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.state = {
-      currentUser: {name: "Bill"
+      currentUser: {name: ''
                     },
       messages: []
     };
   }
   componentDidMount() {
+
+
+
+
+
     const socket = new WebSocket("ws://localhost:3001")
     console.log('connected to server');
     socket.onopen = (e) => {
