@@ -7,6 +7,7 @@ class Playlist extends Component {
   constructor(props){
     super(props);
     this.state = {
+      currentUser: queryString.parse(this.props.location.search),
       accessToken: queryString.parse(this.props.location.search),
       playlists: [],
       tracks: []
@@ -14,25 +15,32 @@ class Playlist extends Component {
   }
 
   componentDidMount(){
+    // Saving the userID and the accessToken to local localStorage
+
+    localStorage.setItem('userId', this.state.currentUser.userId);
+    localStorage.setItem('accessToken', this.state.accessToken.access_token);
 
   // Getting the users playlists
+
+    let userId = this.state.currentUser.userId;
     const accessToken = this.state.accessToken.access_token;
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
-    axios.get(`https://api.spotify.com/v1/users/digital-fabric/playlists`, options)
+    axios.get(`https://api.spotify.com/v1/users/${userId}/playlists`, options)
       .then((res)=>{
-        console.log(res.data.items);
         this.setState({playlists: res.data.items})
       })
   }
 
   // Request for the playlists tracks and post to the mix playlist
+
   getTracks = (playlistID) => {
+    let userId = this.state.currentUser.userId;
     const accessToken = this.state.accessToken.access_token;
     const token_type = 'Bearer';
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
-    axios.get(`https://api.spotify.com/v1/users/digital-fabric/playlists/${playlistID}/tracks`, options)
+    axios.get(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistID}/tracks`, options)
     .then((res) => {
-      console.log(res.data.items);
+      // Posting the tracks of the selected playlist to the Mix playlist
       this.setState({tracks: res.data.items})
       this.state.tracks.forEach((track) => {
        let uri = track.track.uri;
@@ -50,6 +58,7 @@ class Playlist extends Component {
        })
      })
     })
+    // This .then is a redirect to the space
     .then((res) => {
       this.props.history.push('/space')
     })

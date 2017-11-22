@@ -11,6 +11,10 @@ let express = require('express'); // Express web server framework
 let request = require('request'); // "Request" library
 let querystring = require('querystring');
 let cookieParser = require('cookie-parser');
+if (typeof localStorage === "undefined" || localStorage === null) {
+  var LocalStorage = require('node-localstorage').LocalStorage;
+  localStorage = new LocalStorage('./scratch');
+}
 require('dotenv').config();
 
 console.log("Client_ID from env: ", process.env.CLIENT_ID);
@@ -105,13 +109,17 @@ app.get('/callback', function(req, res) {
         // use the access token to access the Spotify Web API
         request.get(options, function(error, response, body) {
           console.log(body);
+          localStorage.setItem('userId', body.id);
+          let user = localStorage.getItem('userId');
+          console.log('Local Storage *******', user)
         });
 
         // we can also pass the token to the browser to make requests from there
         res.redirect('http://localhost:3000/playlist?' +
           querystring.stringify({
             access_token: access_token,
-            refresh_token: refresh_token
+            refresh_token: refresh_token,
+            userId: localStorage.getItem('userId')
           }));
       } else {
         res.redirect('/#' +
