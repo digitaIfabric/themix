@@ -2,16 +2,12 @@
   height: 100%;
   width: 50%;
 }
-
-.fullbg-root {
-    background-color: #181818 !important;
-    background-image: none !important;
-    z-index: 100;
+.spacebg {
+  background-color: #181818;
 }
-
 .chatbar {
-      background: #282828;
-      border-top: 1px solid #282828;
+      background: black;
+      border-top: 1px solid black;
       bottom: 0;
       width: 50%;
       display: flex;
@@ -27,7 +23,6 @@
       line-height: 40px;
       margin: 5px;
       padding: 0 9px;
-      color: black;
     }
 
     .chatbarmessage {
@@ -35,7 +30,6 @@
     }
     .messagelist {
       background: #fff;
-        color: white;
     }
     .chatbarusername {
       flex: 2;
@@ -43,8 +37,9 @@
 
     .message {
       display: flex;
+      color: #fff;
       padding: 5px;
-      margin-top: 10px;
+      margin-top: 20px;
       width: 50%
     }
 
@@ -59,7 +54,11 @@
       margin: 5px;
       padding: 0 10px;
     }
-
+    .message-avatar {
+      width: 6%;
+      height: 6%;
+      border-radius: 180px 180px 180px;
+    }
     .message-content {
       flex: 8;
     }
@@ -71,7 +70,7 @@
 
     .navbar {
       background: #282828;
-      border-bottom: 1px solid #282828;
+      border-bottom: 1px solid black;
       color: white;
       font-family: 'Lobster', cursive;
       height: 80px;
@@ -91,5 +90,3 @@
       padding: 10px 0px 10px 10px;
       text-decoration: none;
     }
-
-
