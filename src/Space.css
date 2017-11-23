@@ -2,9 +2,16 @@
   height: 100%;
   width: 50%;
 }
+
+.fullbg-root {
+    background-color: #181818 !important;
+    background-image: none !important;
+    z-index: 100;
+}
+
 .chatbar {
-      background: black;
-      border-top: 1px solid black;
+      background: #282828;
+      border-top: 1px solid #282828;
       bottom: 0;
       width: 50%;
       display: flex;
@@ -20,6 +27,7 @@
       line-height: 40px;
       margin: 5px;
       padding: 0 9px;
+      color: black;
     }
 
     .chatbarmessage {
@@ -27,6 +35,7 @@
     }
     .messagelist {
       background: #fff;
+        color: white;
     }
     .chatbarusername {
       flex: 2;
@@ -61,8 +70,8 @@
     }
 
     .navbar {
-      background: black;
-      border-bottom: 1px solid black;
+      background: #282828;
+      border-bottom: 1px solid #282828;
       color: white;
       font-family: 'Lobster', cursive;
       height: 80px;
@@ -82,3 +91,5 @@
       padding: 10px 0px 10px 10px;
       text-decoration: none;
     }
+
+
