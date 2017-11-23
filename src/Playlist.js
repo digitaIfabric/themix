@@ -69,8 +69,9 @@ class Playlist extends Component {
     let { playlists = undefined } = this.state;
       if(playlists){
     return (
-    <div className='overall'>
+    <div>
       <h1 className="head">Choose your Playlist</h1>
+      <div className='overall'>
       { playlists.map( (playlist, index) => {
       return(
         <div id="card" key={index}>
@@ -79,7 +80,8 @@ class Playlist extends Component {
           <button onClick={(evt) => this.getTracks(playlist.id)}>Add to Mix</button>
         </div>
       )})}
-    </div>
+     </div>
+   </div>
     )} else {
       return (
         <h1>Loading.....</h1>

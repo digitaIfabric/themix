@@ -1,79 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+
 @import url(https://fonts.googleapis.com/css?family=Nunito:300);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
-
-a {
-    text-decoration: none;
-}
-
-p {
-    text-align: center;
-    font-family: "Nunito", sans-serif;
-}
-.fullbg {
-  background-image: url('./spotbg.jpg');
-}
-
-div.pagebrand {
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    padding-top: 100px;;
-    font-size: 40px;
-    letter-spacing: 2px;
-    color: white;
-}
-
-footer {
-    text-align: center;
-}
-
-div.copyright {
-    text-align: center;
-    font-size: 12px;
-    padding-top: 150px;
-}
-
-div.social-media-footer {
-    font-size: 40px;
-    padding: 2px;
-    text-align: center;
-}
-
-ul.loginbar {
-    display: inline;
-}
-
-li.login {
-    display: inline;
-    float: right;
-    padding: 8px;
-}
-
-li.socialmedia {
-    display: inline;
-    padding: 10px;
-}
-
-.social-media-footer a:link {
-    color: black;
-}
-
-.social-media-footer a:visited {
-    color: black;
-}
-
-/* Decorations */
-sup {
-    font-size: 36px;
-    font-weight: 100;
-    line-height: 55px;
-
-}
-
 /* Buttons */
 a.animated-button:link, a.animated-button:visited {
     position: relative;
@@ -167,7 +94,7 @@ a.animated-button.victoria-two:after {
 }
 
 a.animated-button.victoria-three {
-    border: 2px solid #4286f4;
+    border: 2px solid #81f27d;
     width: 30%;
     height: 20%;
     text-align: center;
@@ -176,7 +103,7 @@ a.animated-button.victoria-three {
 }
 
 a.animated-button.victoria-three:after {
-    background: #4286f4;
+    background: #81f27d;
     opacity: .5;
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
@@ -616,8 +543,41 @@ body {
 .form-signin .btn, .form-signup .btn {
     margin-bottom: 10px;
 }
+.fullbg {
+  background-image: url('./Equalizer.mp4');
+}
 div#login {
   text-align: center;
-  font-size: 50px;
+  font-size: 100px;
+  font-family: 'Lobster', cursive;
   color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* VIDEO */
+.video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative;
+    top: 30%;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+.spotifylogo {
+  margin-top: 10%;
 }
