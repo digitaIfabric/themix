@@ -13,7 +13,7 @@ class Join extends Component {
         <div className="content">
             <h1><input type="text" className="input-code" maxlength="4" name="sessionNum" placeholder=" ____"/></h1>
             {/*<input type="text" className="input" maxlength="4" name="sessionNum" onkeypress="return isNumberKey(event)" />*/}
-            {/*<a href="http://localhost:3000/playlist" className="btn btn-sm animated-button victoria-three">Join the Party</a>*/}
+            <a href="http://localhost:3000/playlist" className="btn btn-sm animated-button victoria-three">Join the Party</a>
         </div>
         </div>
           <footer className="content">
