@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import ChatBar from './partials/ChatBar';
+import ReactPlayer from 'react-player'
+import { findDOMNode } from 'react-dom'
+import screenfull from 'screenfull'
 import './Space.css';
 import axios from 'axios';
 import MessageList from './partials/MessageList';
 class Space extends Component {
-  constructor(props) {
+
+    onClickFullscreen = () => {
+        screenfull.request(findDOMNode(this.player))
+    }
+
+    constructor(props) {
     super(props);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.state = {
@@ -62,7 +70,9 @@ class Space extends Component {
   render() {
     return (
       <div>
-          <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
+        return <ReactPlayer className="youtube" url='https://www.youtube.com/watch?v=0dKv7BzlCVw' playing />
+        <button className="fullscreen-button" onClick={this.onClickFullscreen}>Fullscreen</button>
+        <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
         <div className="messenger">
           <nav className="navbar">
             <a className="navbar-brand">The Mixer</a>
@@ -76,5 +86,6 @@ class Space extends Component {
   }
 
 }
+
 
 export default Space;

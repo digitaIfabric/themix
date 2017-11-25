@@ -158,6 +158,13 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
+// TODO GETTER for YOUTUBE track name and artist
+//
+// app.get('/youtube', function(req, res) {
+//
+//     // requesting access token from refresh token
+// }
+
 console.log('Listening on 3003');
 app.listen(3003);
 

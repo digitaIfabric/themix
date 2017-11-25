@@ -546,9 +546,21 @@ a.animated-button.thar-four:before {
 
 .spotify {
     position: fixed;
-    top: 50%;
+    top: 24.999999%;
+    left: 74.99999999%;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.youtube {
+    position: fixed;
+    top: 75%;
     left: 75%;
     z-index: 1;
+    width: 50% !important;
+    height: 50% !important;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
