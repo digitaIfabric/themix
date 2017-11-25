@@ -5,6 +5,8 @@ import Home from "./Home"
 import Playlist from "./Playlist"
 import Space from './Space'
 import Privacy from './Privacy'
+import Join from './Join'
+import Create from './Create'
 class App extends Component {
   render() {
     return (
@@ -14,6 +16,8 @@ class App extends Component {
           <Route path="/playlist" component={Playlist} />
           <Route path="/space" component={Space} />
           <Route path="/privacy" component={Privacy} />
+          <Route path="/join" component={Join} />
+          <Route path="/create" component={Create} />
         </div>
       </BrowserRouter>
     );
