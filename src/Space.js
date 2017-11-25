@@ -36,12 +36,15 @@ class Space extends Component {
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
-        this.setState({url: "https://www.youtube.com/watch?v=3M_5oYU-IsU"});
         this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}});
+    })
+    axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
+    .then((res) => {
+        const vidId = '3M_5oYU-IsU';
+        this.setState({url: `https://www.youtube.com/watch?v=${vidId}`});
     })
 
     // Create Socket and handle chat events
-
     const socket = new WebSocket("ws://localhost:3001")
     console.log('connected to server');
     socket.onopen = (e) => {
@@ -75,7 +78,7 @@ class Space extends Component {
   render() {
     // const url = 'https://www.youtube.com/watch?0dKv7BzlCVw';
     //  this.state.url =  "https://www.youtube.com/watch?0dKv7BzlCVw";
-      console.log('*****************This state url', this.state.url);
+    //   console.log('*****************This state url', this.state.url);
       return (
       <div>
         return <ReactPlayer className="youtube" url={this.state.url} playing />
