@@ -20,8 +20,12 @@ class Space extends Component {
         name: "",
         avatar: ""
       },
+      url: "http",
       messages: []
     };
+    // this.state = {
+    //     url: ""
+    // };
   }
   componentDidMount() {
     document.body.classList.remove('fullbg');
@@ -32,7 +36,8 @@ class Space extends Component {
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
-      this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}})
+        this.setState({url: "https://www.youtube.com/watch?v=3M_5oYU-IsU"});
+        this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}});
     })
 
     // Create Socket and handle chat events
@@ -68,9 +73,12 @@ class Space extends Component {
   }
 }
   render() {
-    return (
+    // const url = 'https://www.youtube.com/watch?0dKv7BzlCVw';
+    //  this.state.url =  "https://www.youtube.com/watch?0dKv7BzlCVw";
+      console.log('*****************This state url', this.state.url);
+      return (
       <div>
-        return <ReactPlayer className="youtube" url='https://www.youtube.com/watch?v=0dKv7BzlCVw' playing />
+        return <ReactPlayer className="youtube" url={this.state.url} playing />
         <button className="fullscreen-button" onClick={this.onClickFullscreen}>Fullscreen</button>
         <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
         <div className="messenger">
