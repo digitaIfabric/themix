@@ -1,36 +1,26 @@
 import React, { Component } from 'react';
+import './Privacy.css';
+
 class Privacy extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="privacy">
         <div className="pagebrand content">
             <h1><a href="/"> Welcome to The Mix </a></h1>
-            <p>Privacy policy
-                    <br></br>
-                EFFECTIVE DATE November 2017
+            <p> Privacy Policy EFFECTIVE DATE November 2017
                 The Mix ("The Mix") operates this Web site. The Mix ("we" or "us") recognizes that you care how information about you is used and shared. We have created this Privacy Policy to inform you of our information collection, use and sharing practices for this Web site.
-                <br></br>
                 WITH WHOM DO WE SHARE YOUR INFORMATION?
                 We do not share with others, or sell or rent to others, any personal information that you provide to us through the Web site or through our Customer Service Department, except with your cone third parties to perform services sent or as described in this Privacy Policy. We engag in connection with the operation of our business. Examples of these services include payment processing and authorization, fraud protection and credit risk reduction, product customization, order fulfillment and shipping, marketing and promotional material distribution, Web site evaluation, data analysis and, where applicable, data cleansing. We provide personal information to these third parties, but we authorize them to use this information only in connection with the services they perform.
-                <br></br>
                 Please be advised that the practices described in this Privacy Policy apply only to information gathered through the platforms, where applicable, through our Customer Service Department in connection with these platforms, and do not necessarily reflect our practices with respect to information gathered through other Web sites that we operate or through other off-line means.
-                <br></br>
                 If you have any questions regarding this Privacy Policy, you should contact our Customer Service Department.
-                <br></br>
                 WHAT INFORMATION ABOUT ME IS COLLECTED AND STORED?
                 We collect and store personal information that you enter into the Web site. For example, when you open an account or place an order, we collect and store some or all of the following information that you provide: name, billing address, shipping address, email address, telephone number, credit card number and expiration date. This information is used to provide the products and services that you have ordered or requested, to process and ship orders, to send order and shipping confirmations and to provide customer service. This information also may be used to contact you about sales, special offers and new site features, unless you have opted not to receive promotional communications in connection with this Web site.
-                <br></br>
                 Personal information.  You can visit the Site without submitting any personal information. However, in order to subscribe to our services or use features of our Platforms, you will be required to provide personal information. For example:
-                <br></br>
                 Registration.  In order to use some features of the Platforms, you must first connect another music service account. We collect and store some or all of the following information that you provide: name, email address, telephone number in accordance with our terms of use.
-                <br></br>
                 Facebook.   The Mix may require you to log in through your Facebook account. If you link your Facebook account to a The Mix service, this allows us to obtain information from those accounts (such as your friends or contacts). The information we obtain from those services often depends on your settings or their privacy policies, so be sure to check what those are.
-                <br></br>
                 Orders.  If you purchase a product or service from us, we request certain personal information from you on our order form. You must provide personal contact information (such as name, email address, and shipping address) and financial information (such as a credit card number and expiration date).
-                <br></br>
                 Posted Content.  We enable users to submit additional information that may be made accessible to other users or the general public. To post content, you may be required to first register by providing information such as an email address, display name, and password. Registrants also may choose to voluntarily provide additional information, including an avatar image, a biography, and/or information about their location. And, of course, registrants may disclose personal and other information through their posted content.
-                <br></br>
 
                 Feedback.  Our online contact form also contains a "message" field through which you may submit additional personal information.
 

@@ -9,7 +9,7 @@ class Home extends Component {
             <p>Bring your mix to places near you</p>
         </div>
         <div className="content">
-            <a href="http://localhost:3003/" className="btn btn-sm animated-button victoria-three">Get Started</a>
+            <a href="http://localhost:3000/join" className="btn btn-sm animated-button victoria-three">Get Started</a>
         </div>
         </div>
           <footer className="content">

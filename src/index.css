@@ -554,6 +554,13 @@ a.animated-button.thar-four:before {
     transform: translate(-50%, -50%);
 }
 
+.cover-art-container .cover{
+    position: absolute !important;
+    top: -75px !important;
+    width: 110% !important;
+    height: 355px !important;
+}
+
 .youtube {
     position: fixed;
     top: 74.9999999%;

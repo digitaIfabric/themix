@@ -76,14 +76,11 @@ class Space extends Component {
   }
 }
   render() {
-    // const url = 'https://www.youtube.com/watch?0dKv7BzlCVw';
-    //  this.state.url =  "https://www.youtube.com/watch?0dKv7BzlCVw";
-    //   console.log('*****************This state url', this.state.url);
       return (
       <div>
-        return <ReactPlayer className="youtube" url={this.state.url} playing />
+        <ReactPlayer className="youtube" url={this.state.url} playing />
         <button className="fullscreen-button" onClick={this.onClickFullscreen}>Fullscreen</button>
-        <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
+        <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
         <div className="messenger">
           <nav className="navbar">
             <a className="navbar-brand">The Mixer</a>
