@@ -3,14 +3,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="header">
+            <a href="http://localhost:3000/create">Create a space</a>
+        </div>
         <div className="pagebrand content">
             <h1> Welcome to The Mix </h1>
             <p>Bring your mix to places near you</p>
         </div>
         <div className="content">
-            <a href="http://localhost:3000/join" className="btn btn-sm animated-button victoria-three">Get Started</a>
-        </div>
+            <a href="./join" className="btn btn-sm animated-button victoria-three">Get Started</a>
         </div>
           <footer className="content">
             <div className="copyright">
