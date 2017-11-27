@@ -86,7 +86,7 @@ class Playlist extends Component {
         }
         return(
           <div id="card" key={index}>
-            <h1><a href={playlist.external_urls.spotify} target='_blank'>{playlist.name}</a></h1>
+            <h1><a href={playlist.external_urls.spotify} target='_blank' rel='noopener noreferrer'>{playlist.name}</a></h1>
             {/*<h3>{playlist.tracks.total} Track(s)</h3>*/}
             <h3>{playlist.tracks.total} {TT}</h3>
             <button onClick={(evt) => this.getTracks(playlist.id)}>Add to Mix</button>
