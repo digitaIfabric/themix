@@ -2,14 +2,53 @@ import React, { Component } from 'react';
 import './Test.css';
 import './features.js';
 class Test extends Component {
+  componentDidMount() {
+    document.body.classList.add('fullbg');
+  }
   render() {
     return (
-      <div class='box'>
-        <div class='title'>Playlist Name</div>
-        <div className="button"><a><button>Add to The Mix</button></a></div>
-        <div class='wave -one'></div>
-        <div class='wave -two'></div>
-        <div class='wave -three'></div>
+      <div class="slider">
+        <div class="items-group">
+          <div class="item">
+            <div class="block">
+              <span class="circleLight"></span>
+              <div class="text">
+                <h2>Hi</h2>
+                <p>I`m cool card</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="block">
+              <span class="circleLight"></span>
+              <div class="text">
+                <h2>Hi</h2>
+                <p>I`m cool card</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="block">
+              <span class="circleLight"></span>
+              <div class="text">
+                <h2>Hi</h2>
+                <p>I`m cool card</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="block">
+              <span class="circleLight"></span>
+              <div class="text">
+                <h2>Hi</h2>
+                <p>I`m cool card</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigations">
+          <ul class="dots"></ul>
+        </div>
       </div>
     )
   }

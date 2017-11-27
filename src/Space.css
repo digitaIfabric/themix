@@ -1,92 +1,83 @@
 .spotify {
   height: 100%;
-  width: 50%;
-}
+  width: 50%; }
+
 .spacebg {
-  background-color: #181818;
-}
+  background-color: #181818; }
+
 .chatbar {
-      background: black;
-      border-top: 1px solid black;
-      bottom: 0;
-      width: 50%;
-      display: flex;
-      /*padding: 5px;*/
-      position: fixed;
-    }
+  background: black;
+  border-top: 1px solid black;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  /*padding: 5px;*/
+  position: fixed; }
 
-    .chatbarmessage,
-    .chatbarusername {
-      border: 1px solid black;
-      display: block;
-      height: 40px;
-      line-height: 40px;
-      margin: 5px;
-      padding: 0 9px;
-    }
+.chatbarmessage,
+.chatbarusername {
+  border: 1px solid black;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  padding: 0 9px; }
 
-    .chatbarmessage {
-      flex: 8;
-    }
-    .messagelist {
-      background: #fff;
-    }
-    .chatbarusername {
-      flex: 2;
-    }
+.chatbarmessage {
+  flex: 8; }
 
-    .message {
-      display: flex;
-      color: #fff;
-      padding: 5px;
-      margin-top: 20px;
-      width: 50%
-    }
+.messagelist {
+  background: #fff; }
 
-    .message.system {
-      font-style: italic;
-      padding: 5px 20px;
-    }
+.chatbarusername {
+  flex: 2; }
 
-    .message-content,
-    .message-username {
-      overflow: hidden;
-      margin: 5px;
-      padding: 0 10px;
-    }
-    .message-avatar {
-      width: 6%;
-      height: 6%;
-      border-radius: 180px 180px 180px;
-    }
-    .message-content {
-      flex: 8;
-    }
+.message {
+  display: flex;
+  color: #fff;
+  padding: 5px;
+  margin-top: 20px;
+  width: 50%; }
 
-    .message-username {
-      flex: 2;
-      font-weight: 700;
-    }
+.message.system {
+  font-style: italic;
+  padding: 5px 20px; }
 
-    .navbar {
-      background: #282828;
-      border-bottom: 1px solid black;
-      color: white;
-      font-family: 'Lobster', cursive;
-      height: 80px;
-      width: 50%;
-      /*padding: 0 10px;*/
-      position: fixed;
-      top: 0;
-    }
+.message-content,
+.message-username {
+  overflow: hidden;
+  margin: 5px;
+  padding: 0 10px; }
 
-    .navbar-brand {
-      color: inherit;
-      display: block;
-      font-weight: 700;
-      font-size: 35px;
-      height: 77px;
-      line-height: 60px;
-      padding: 10px 0px 10px 10px;
-      text-decoration: none;
-    }
+.message-avatar {
+  width: 6%;
+  height: 6%;
+  border-radius: 180px 180px 180px; }
+
+.message-content {
+  flex: 8; }
+
+.message-username {
+  flex: 2;
+  font-weight: 700; }
+
+.navbar {
+  background: #282828;
+  border-bottom: 1px solid black;
+  color: white;
+  font-family: 'Lobster', cursive;
+  height: 80px;
+  width: 50%;
+  /*padding: 0 10px;*/
+  position: fixed;
+  top: 0; }
+
+.navbar-brand {
+  color: inherit;
+  display: block;
+  font-weight: 700;
+  font-size: 35px;
+  height: 77px;
+  line-height: 60px;
+  padding: 10px 0px 10px 10px;
+  text-decoration: none; }

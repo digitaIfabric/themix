@@ -6,7 +6,11 @@ class Playlist extends Component {
   constructor(props){
     super(props);
     this.state = {
-      currentUser: queryString.parse(this.props.location.search),
+      currentUserId: queryString.parse(this.props.location.search),
+      currentUser: {
+        name: "",
+        avatar: ""
+      },
       accessToken: queryString.parse(this.props.location.search),
       playlists: [],
       tracks: []
@@ -16,15 +20,20 @@ class Playlist extends Component {
   componentDidMount(){
     document.body.classList.add('fullbg');
     // Saving the userID and the accessToken to local localStorage
-
-    localStorage.setItem('userId', this.state.currentUser.userId);
+    localStorage.setItem('userId', this.state.currentUserId.userId);
     localStorage.setItem('accessToken', this.state.accessToken.access_token);
 
-  // Getting the users playlists
-
-    let userId = this.state.currentUser.userId;
+  // Get users info
+    let userId = this.state.currentUserId.userId;
     const accessToken = this.state.accessToken.access_token;
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
+    axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
+    .then((res) => {
+      this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}})
+      console.log(res.data)
+      console.log(this.state.currentUser)
+    })
+  // Getting the users playlists
     axios.get(`https://api.spotify.com/v1/users/${userId}/playlists`, options)
       .then((res)=>{
         this.setState({playlists: res.data.items})
@@ -34,7 +43,7 @@ class Playlist extends Component {
   // Request for the playlists tracks and post to the mix playlist
 
   getTracks = (playlistID) => {
-    let userId = this.state.currentUser.userId;
+    let userId = this.state.currentUserId.userId;
     const accessToken = this.state.accessToken.access_token;
     const token_type = 'Bearer';
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
@@ -63,13 +72,22 @@ class Playlist extends Component {
       this.props.history.push('/space')
     })
   }
-
   render() {
     // This if handles the empty array of playlists at first
     let { playlists = undefined } = this.state;
       if(playlists){
     return (
     <div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/about">About</a></li>
+          <li><img src={this.state.currentUser.avatar} alt="userimage" className="userimg"/></li>
+          <li><h3>Logged in as {this.state.currentUser.name}</h3></li>
+          <li><button>Logout</button></li>
+        </ul>
+      </nav>
       <h1 className="head">Choose your Playlist</h1>
       <div className='overall'>
       { playlists.map( (playlist, index) => {
