@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 import ChatBar from './partials/ChatBar';
 import ReactPlayer from 'react-player'
 import { findDOMNode } from 'react-dom'
-import screenfull from 'screenfull'
 import './Space.css';
 import axios from 'axios';
 import MessageList from './partials/MessageList';
 class Space extends Component {
-
-    onClickFullscreen = () => {
-        screenfull.request(findDOMNode(this.player))
-    }
 
     constructor(props) {
     super(props);
@@ -21,7 +16,8 @@ class Space extends Component {
         avatar: ""
       },
       url: "http",
-      messages: []
+      messages: [],
+      userCount: ''
     };
     // this.state = {
     //     url: ""
@@ -36,7 +32,7 @@ class Space extends Component {
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
-        this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}});
+        this.setState({currentUser: {name: res.data.display_name}});
     })
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
@@ -58,11 +54,18 @@ class Space extends Component {
           const messages = this.state.messages.concat(data);
           this.setState({messages: messages})
         break;
+        case "incomingUserCount":
+        this.incomingUserCount(data)
+        break;
         default:
 
     }
   }
 }};
+incomingUserCount(data){
+    const userCount = data.count
+    this.setState({userCount: userCount})
+  }
   // Send message to chat server on key press
   handleKeyPress(event){
   if(event.key === 'Enter'){
@@ -79,13 +82,12 @@ class Space extends Component {
       return (
       <div>
         <ReactPlayer className="youtube" url={this.state.url} playing />
-        <button className="fullscreen-button" onClick={this.onClickFullscreen}>Fullscreen</button>
         <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:0dg3avo57i3ocwbeca8nymwen:playlist:2lh5ZSPvdWojJ3TKG4u7pI" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
         <div className="messenger">
           <nav className="navbar">
+            <div id="userCount">users connected:{this.state.userCount}</div>
             <a className="navbar-brand">The Mixer</a>
           </nav>
-          <button id="showchat">Click to show chat</button>
           <MessageList messages={this.state.messages} />
           <ChatBar pressKey={this.handleKeyPress} className="chatbarclass"/>
         </div>
