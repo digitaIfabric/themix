@@ -40,7 +40,7 @@ class Space extends Component {
     })
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
-        const vidId = '3M_5oYU-IsU';
+        let vidId = 'r7imYeuAfkg'; //MNH '3M_5oYU-IsU';
         this.setState({url: `https://www.youtube.com/watch?v=${vidId}`});
     })
 
@@ -80,7 +80,7 @@ class Space extends Component {
       <div>
         <ReactPlayer className="youtube" url={this.state.url} playing />
         <button className="fullscreen-button" onClick={this.onClickFullscreen}>Fullscreen</button>
-        <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
+        <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:0dg3avo57i3ocwbeca8nymwen:playlist:2lh5ZSPvdWojJ3TKG4u7pI" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
         <div className="messenger">
           <nav className="navbar">
             <a className="navbar-brand">The Mixer</a>
