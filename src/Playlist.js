@@ -29,9 +29,7 @@ class Playlist extends Component {
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
-      this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}})
-      console.log(res.data)
-      console.log(this.state.currentUser)
+      this.setState({currentUser: {name: res.data.display_name}})
     })
   // Getting the users playlists
     axios.get(`https://api.spotify.com/v1/users/${userId}/playlists`, options)
@@ -53,7 +51,7 @@ class Playlist extends Component {
       this.setState({tracks: res.data.items})
       this.state.tracks.forEach((track) => {
        let uri = track.track.uri;
-       let postUrl = `https://api.spotify.com/v1/users/digital-fabric/playlists/2M3kZY1t1vocCub719j2qR/tracks?uris=${uri}`
+       let postUrl = `https://api.spotify.com/v1/users/0dg3avo57i3ocwbeca8nymwen/playlists/2lh5ZSPvdWojJ3TKG4u7pI/tracks?uris=${uri}`
        axios({
          method: 'post',
          url: postUrl,
@@ -83,7 +81,7 @@ class Playlist extends Component {
           <li><a href="/">Home</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/about">About</a></li>
-          <li><img src={this.state.currentUser.avatar} alt="userimage" className="userimg"/></li>
+          <li><img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" alt="userimage" className="userimg"/></li>
           <li><h3>Logged in as {this.state.currentUser.name}</h3></li>
           <li><button>Logout</button></li>
         </ul>

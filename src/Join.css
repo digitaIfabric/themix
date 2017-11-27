@@ -1,0 +1,40 @@
+.join-button{
+    display: block !important;
+}
+
+.input-code{
+    font-family: "Lobster";
+    letter-spacing: 10px;
+    font-size: 40px;
+    border: 2px solid #4286f4;
+    outline: none;
+    width: 320px;
+    height: 55px;
+    box-sizing: border-box;
+    background: transparent;
+    text-align: center;
+    color: white;
+}
+
+a.input-code:after {
+    background: #4286f4;
+}
+
+.input-code::-webkit-input-placeholder {
+    font-family: "Lobster";
+    color: white !important;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.input-code:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+.input-code::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+.input-code:-ms-input-placeholder {
+    color: white !important;
+}

@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import ChatBar from './partials/ChatBar';
+import ReactPlayer from 'react-player'
+import { findDOMNode } from 'react-dom'
+import screenfull from 'screenfull'
 import './Space.css';
 import axios from 'axios';
 import MessageList from './partials/MessageList';
 class Space extends Component {
-  constructor(props) {
+
+    onClickFullscreen = () => {
+        screenfull.request(findDOMNode(this.player))
+    }
+
+    constructor(props) {
     super(props);
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.state = {
@@ -12,8 +20,12 @@ class Space extends Component {
         name: "",
         avatar: ""
       },
+      url: "http",
       messages: []
     };
+    // this.state = {
+    //     url: ""
+    // };
   }
   componentDidMount() {
     document.body.classList.remove('fullbg');
@@ -24,11 +36,15 @@ class Space extends Component {
     const options = {headers: {'Authorization': 'Bearer ' + accessToken}, json: true}
     axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
     .then((res) => {
-      this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}})
+        this.setState({currentUser: {name: res.data.display_name, avatar: res.data.images[0].url}});
+    })
+    axios.get(`https://api.spotify.com/v1/users/${userId}`, options)
+    .then((res) => {
+        let vidId = 'r7imYeuAfkg'; //MNH '3M_5oYU-IsU';
+        this.setState({url: `https://www.youtube.com/watch?v=${vidId}`});
     })
 
     // Create Socket and handle chat events
-
     const socket = new WebSocket("ws://localhost:3001")
     console.log('connected to server');
     socket.onopen = (e) => {
@@ -60,9 +76,11 @@ class Space extends Component {
   }
 }
   render() {
-    return (
+      return (
       <div>
-          <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:digital-fabric:playlist:2M3kZY1t1vocCub719j2qR&view=coverart" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
+        <ReactPlayer className="youtube" url={this.state.url} playing />
+        <button className="fullscreen-button" onClick={this.onClickFullscreen}>Fullscreen</button>
+        <iframe className="spotify" src="https://open.spotify.com/embed?uri=spotify:user:0dg3avo57i3ocwbeca8nymwen:playlist:2lh5ZSPvdWojJ3TKG4u7pI" frameBorder="0" allowtransparency="true" title="spotifyplayer"></iframe>
         <div className="messenger">
           <nav className="navbar">
             <a className="navbar-brand">The Mixer</a>
@@ -76,5 +94,6 @@ class Space extends Component {
   }
 
 }
+
 
 export default Space;

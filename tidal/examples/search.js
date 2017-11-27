@@ -2,12 +2,12 @@ var TidalAPI = require('tidalapi');
 require('dotenv').config()
 
 var api = new TidalAPI({
-    username: process.env.TIDAL_USERNAME,
-    password: process.env.TIDAL_PASSWORD,
-    token: process.env.TIDAL_TOKEN,
-    // username: '',
-    // password: '',
-    // token: '_KM2HixcUBZtmktH',
+    // username: process.env.TIDAL_USERNAME,
+    // password: process.env.TIDAL_PASSWORD,
+    // token: process.env.TIDAL_TOKEN,
+    username: 'david@digitalfabric.space',
+    password: 'password',
+    token: '4zx46pyr9o8qZNRw',
     clientVersion: '2.2.1--7',
     quality: 'Standard'
 });
@@ -34,10 +34,10 @@ api.search({type: 'tracks', query: '99 Problems', limit: 1}, function(data){
   console.log(data.tracks);
 })
 //
-// api.search({type: 'tracks,albums,artists', query: 'Man Not Hot', limit: 1}, function(data){
-//   console.log('============== TRACK MAN NOT HOT ==============',data.tracks);
-//   // console.log('=== Data album ====',data.albums);
-//   // console.log('=== Data artists ====',data.artists);
+api.search({type: 'tracks,albums,artists', query: 'Man Not Hot', limit: 1}, function(data){
+  console.log('============== TRACK MAN NOT HOT ==============',data.tracks);
+  // console.log('=== Data album ====',data.albums);
+  // console.log('=== Data artists ====',data.artists);
 // })
 //
 // api.getTrackInfo({id: 78990816}, function(data){

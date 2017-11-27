@@ -1,7 +1,25 @@
 .spotify {
-  height: 100%;
-  width: 50%; }
-
+    position: fixed;
+    top: 25%;
+    left: 74.99999999%;
+    z-index: 2;
+    height: 50%;
+    width: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.youtube {
+    position: fixed;
+    top: 74.9999999%;
+    left: 75%;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 .spacebg {
   background-color: #181818; }
 
