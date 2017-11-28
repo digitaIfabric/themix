@@ -87,7 +87,6 @@ class Playlist extends Component {
           <li><a href="/about">About</a></li>
           <li><img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" alt="userimage" className="userimg"/></li>
           <li><h3>Logged in as {this.state.currentUser.name}</h3></li>
-          <li><button>Logout</button></li>
         </ul>
       </nav>
       <h1 className="head">Choose your Playlist</h1>
