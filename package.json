@@ -17,6 +17,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "screenfull": "^3.3.2",
+    "spotify-web-api-node": "^2.5.0",
     "tidalapi": "^0.2.3",
     "whatwg-fetch": "^2.0.3"
   },

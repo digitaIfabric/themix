@@ -51,14 +51,18 @@ class Playlist extends Component {
       this.setState({tracks: res.data.items})
       this.state.tracks.forEach((track) => {
        let uri = track.track.uri;
-       let postUrl = `https://api.spotify.com/v1/users/0dg3avo57i3ocwbeca8nymwen/playlists/2lh5ZSPvdWojJ3TKG4u7pI/tracks?uris=${uri}`
+       let postUrl = `https://api.spotify.com/v1/users/0dg3avo57i3ocwbeca8nymwen/playlists/2lh5ZSPvdWojJ3TKG4u7pI/tracks?uris=${uri}`;
+       let accessToken2 = "BQD8InLCFBI_PzAc7LnVtdXfx0JDSgVhPWI2dCZ6nv9wKyjYOappY87e_I4f_PmZC6lhNtWmzmo--_gCqLRQFNcInQoSrkNC5YXRYA_6oWG8_yoj5hPKPA3l7rnP3amaujAUjtAGPOOA3VVPMIocg1qfLLLKAh3n6Jdl93f3RJZe9fHs-zRTC4dRW6oW3eVIeag8EUaiZFn45B8gFX6kRBnpUDQR5MOnw262zVm6kyUav0te_sbIEf41RC3lRxiOrmW-VHSelp82cNPt7X9TFXMCBN5Gtw";
+        // let accessToken2 = "BQC2dSfCH7yL8XnY9N7IRgz8gl1TczhmekSt-0puss5HbqgVl0eeIzb7cyBKTbTDglVoEWFmvAN4v3LhLrJeTtsCdKWd9euytK9lxWXWpeLbLGi7CNIx7oc_31vvCJQe_sV-M7ijQYqyDI6OyfB2o3axM8vnTkNDkEav1CsL_E-jMCgbmIz9RpPGl0QvXbPecKYm-Hx0qE1eaLeIQ6JHOBiWPR71oTg7tuou1M7WHKji4jIcy_ba2B9xg-UeoN2u8DB4e6l9OT_EY4wFybjvC9fNaFTNjQ";
        axios({
          method: 'post',
          url: postUrl,
-         headers: { 'Authorization': `${token_type} ${accessToken}`,'Accept': 'application/json'}
+         headers: { 'Authorization': `${token_type} ${accessToken2}`,'Accept': 'application/json'}
        })
        .then((res) => {
         console.log('posted to playlist')
+           let iframe = document.getElementsByClassName('spotify');
+           iframe.src = iframe.src;
        })
        .catch((err) => {
         console.log(err.response.data)
@@ -91,9 +95,9 @@ class Playlist extends Component {
       { playlists.map( (playlist, index) => {
       return(
         <div id="card" key={index}>
-          <h1>{playlist.name}</h1>
+          <h1><a href={playlist.external_urls.spotify} target='_blank' rel='noopener noreferrer'>{playlist.name}</a></h1>
           <h3>{playlist.tracks.total} Tracks</h3>
-          <button onClick={(evt) => this.getTracks(playlist.id)}>Add to Mix</button>
+          <button onClick={(evt) => this.getTracks(playlist.id)}>Add to WeWork Mix</button>
         </div>
       )})}
      </div>

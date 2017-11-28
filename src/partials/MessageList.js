@@ -6,7 +6,7 @@ class MessageList extends Component {
     return (
       <main className="messages">
         {messages.map((message) => {
-          return <Message key={message.id} username={message.username} content={message.content} avatar={message.avatar} />
+          return <Message key={message.id} username={message.username} content={message.content} avatar="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" />
         })}
       </main>
     );

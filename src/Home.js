@@ -18,12 +18,12 @@ class Home extends Component {
         <div className="content">
             <a href="./join" className="btn btn-sm animated-button victoria-three">Get Started</a>
         </div>
-          <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="true" width="300" height="150">
+          <video id="my-video" className="video" autoPlay="autoplay" loop="loop" muted="true" width="300" height="150">
           <source src={Video} type="video/mp4"/>
           </video>
           <footer className="content">
             <div className="copyright">
-              <a href="">© The Mix 2017 All Rights Reserved. <a href="/privacy">Privacy Policy.</a> ✌❤ <a href="https://github.com/TylerNRobertson/" target="_blank" rel="noopener noreferrer">T</a><a href="https://github.com/digitalfabric92/" target="_blank" rel="noopener noreferrer"> D</a></a>
+              <p>© The Mix 2017 All Rights Reserved. <a href="/privacy">Privacy Policy.</a> ✌❤ <a href="https://github.com/TylerNRobertson/" target="_blank" rel="noopener noreferrer">T</a><a href="https://github.com/digitalfabric92/" target="_blank" rel="noopener noreferrer"> D</a></p>
             </div>
           </footer>
       </div>

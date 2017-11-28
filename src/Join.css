@@ -2,6 +2,14 @@
     display: block !important;
 }
 
+.fullbg {
+    height: 100% !important;
+}
+
+body{
+    background-color: #181818;
+}
+
 .input-code{
     font-family: "Lobster";
     letter-spacing: 10px;

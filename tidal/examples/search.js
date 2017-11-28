@@ -2,12 +2,9 @@ var TidalAPI = require('tidalapi');
 require('dotenv').config()
 
 var api = new TidalAPI({
-    // username: process.env.TIDAL_USERNAME,
-    // password: process.env.TIDAL_PASSWORD,
-    // token: process.env.TIDAL_TOKEN,
-    username: 'david@digitalfabric.space',
-    password: 'password',
-    token: '4zx46pyr9o8qZNRw',
+    username: process.env.TIDAL_USERNAME,
+    password: process.env.TIDAL_PASSWORD,
+    token: process.env.TIDAL_TOKEN,
     clientVersion: '2.2.1--7',
     quality: 'Standard'
 });
