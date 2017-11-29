@@ -38,9 +38,61 @@ div.overall {
 
 div#card:hover {
   color: #fff;
-  background-color: #282828;
   box-shadow: 2px 2px 2px 2px black;
   transform: scale(1.1); }
+
+/*25 Multicolour playlist hovers*/
+
+div#card.one0:hover {
+  background-color: red; }
+div#card.one1:hover {
+  background-color: blue;}
+div#card.one2:hover {
+  background-color: green;}
+div#card.one3:hover {
+  background-color: gold;}
+div#card.one4:hover {
+  background-color: orange;}
+div#card.one5:hover {
+  background-color: blueviolet;}
+div#card.one6:hover {
+  background-color: lime;}
+div#card.one7:hover {
+  background-color: pink;}
+div#card.one8:hover {
+  background-color: turquoise;}
+div#card.one9:hover {
+  background-color: dimgray;}
+div#card.one10:hover {
+  background-color: firebrick;}
+div#card.one11:hover {
+  background-color: darksalmon;}
+div#card.one12:hover {
+  background-color: steelblue;}
+div#card.one13:hover {
+  background-color: sienna;}
+div#card.one14:hover {
+  background-color: tomato;}
+div#card.one15:hover {
+  background-color: magenta;}
+div#card.one16:hover {
+  background-color: darkgreen;}
+div#card.one17:hover {
+  background-color: lightcoral;}
+div#card.one18:hover {
+  background-color: rosybrown;}
+div#card.one19:hover {
+  background-color: peru;}
+div#card.one20:hover {
+  background-color: black;}
+div#card.one21:hover {
+  background-color: midnightblue;}
+div#card.one22:hover {
+  background-color: silver;}
+div#card.one23:hover {
+  background-color: aquamarine;}
+div#card.one24:hover {
+  background-color: wheat;}
 
 button {
   border: solid white 2px;

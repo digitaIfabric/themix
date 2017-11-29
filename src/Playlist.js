@@ -14,6 +14,7 @@ class Playlist extends Component {
       accessToken: queryString.parse(this.props.location.search),
       playlists: [],
       tracks: []
+      // cardStyle: {backgroundColor: "#282828"}
     }
   }
 
@@ -38,8 +39,14 @@ class Playlist extends Component {
       })
   }
 
-  // Request for the playlists tracks and post to the mix playlist
+  // getInitialState = () => {
+  //   return {hover: false}
+  // }
+  // toggleHover = () => {
+  //    this.setState({hover: !this.state.hover})
+  // }
 
+  // Request for the playlists tracks and post to the mix playlist
   getTracks = (playlistID) => {
     let userId = this.state.currentUserId.userId;
     const accessToken = this.state.accessToken.access_token;
@@ -75,6 +82,13 @@ class Playlist extends Component {
     })
   }
   render() {
+    // This sets the hover of the cards to a random color
+    // let cardStyle = {};
+    // if (this.state.hover) {
+    //   cardStyle = {backgroundColor: '#181818'}
+    // } else {
+    //   cardStyle = {backgroundColor: '#282828'}
+    // }
     // This if handles the empty array of playlists at first
     let { playlists = undefined } = this.state;
       if(playlists){
@@ -92,8 +106,12 @@ class Playlist extends Component {
       <h1 className="head">Choose your Playlist</h1>
       <div className='overall'>
       { playlists.map( (playlist, index) => {
+      let colorIndex = index;
+      let string = "one"
+      let colorIndexString = string + colorIndex;
       return(
-        <div id="card" key={index}>
+        <div id="card" className={colorIndexString} key={index}>
+        {/*<div id="card" className={index} key={index} style={cardStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>*/}
           <h1><a href={playlist.external_urls.spotify} target='_blank' rel='noopener noreferrer'>{playlist.name}</a></h1>
           <h3>{playlist.tracks.total} Tracks</h3>
           <button onClick={(evt) => this.getTracks(playlist.id)}>Add to WeWork Mix</button>
