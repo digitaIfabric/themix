@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Join.css';
+import Video2 from './bgidea1.mp4';
+
 // import Button from './partials/Button';
 
 class Join extends Component {
@@ -7,7 +9,8 @@ class Join extends Component {
     super(props);
     this.state = {
         inputValue: '',
-        space:''
+        space:'',
+        buttonStyle:{pointerEvents: "none", cursor: "default"}
         // showButton: false
     };
   }
@@ -22,16 +25,16 @@ class Join extends Component {
     if(event.key === 'Enter' && this.state.inputValue === 'ABCD'){
         console.log('Enter WEWORK');
         this.setState({
-            space: 'WeWork'
-            // showButton: true
+            space: 'WeWork',
+            buttonStyle:{}
         });
         console.log(this.state.inputValue)
     } else if (event.key === 'Enter' && this.state.inputValue === 'CVHQ') {
         console.log('Enter CREW');
         console.log(this.state.inputValue)
         this.setState({
-            space: 'CREW'
-            // showButton: true
+            space: 'CREW',
+            buttonStyle:{}
         });
     } else if (event.key === 'Enter' && this.state.inputValue.length === 4) {
         alert('Try another code.')
@@ -49,9 +52,12 @@ class Join extends Component {
         <div className="content">
             <h1><input type="text" className="input-code" maxLength="4" name="sessionNum" placeholder=" ____" value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} onKeyPress={this.handleKeyPress} /></h1>
             {/*{ this.state.showButton ? <Button /> : null }*/}
-            <a href="http://localhost:3003" className="btn btn-sm animated-button victoria-three join-button">Join {this.state.space}</a>
+            <a href="http://localhost:3003" style={this.state.buttonStyle} className="btn btn-sm animated-button victoria-three join-button">Join {this.state.space}</a>
         </div>
         </div>
+        <video id="my-video" className="video" autoPlay="autoplay" loop="loop" width="300" height="150">
+          <source src={Video2} type="video/mp4"/>
+        </video>
           <footer className="content">
             <div className="copyright">
               <p>© The Mix 2017 All Rights Reserved. <a href="/privacy">Privacy Policy.</a> ✌❤ <a href="https://github.com/TylerNRobertson/" target="_blank" rel="noopener noreferrer">T</a><a href="https://github.com/digitalfabric92/" target="_blank" rel="noopener noreferrer"> D</a></p>
