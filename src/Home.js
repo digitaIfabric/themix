@@ -23,7 +23,7 @@ class Home extends Component {
           </video>
           <footer className="content">
             <div className="copyright">
-              <p>© The Mix 2017 All Rights Reserved. <a href="/privacy">Privacy Policy.</a> ✌❤ <a href="https://github.com/TylerNRobertson/" target="_blank" rel="noopener noreferrer">T</a><a href="https://github.com/digitalfabric92/" target="_blank" rel="noopener noreferrer"> D</a></p>
+              <p>© The Mix 2017 All Rights Reserved. <a href="/privacy">Privacy Policy.</a> ✌<i class="fa fa-heart" aria-hidden="true"></i> <a href="https://github.com/TylerNRobertson/" target="_blank" rel="noopener noreferrer">T</a><a href="https://github.com/digitalfabric92/" target="_blank" rel="noopener noreferrer"> D</a></p>
             </div>
           </footer>
       </div>

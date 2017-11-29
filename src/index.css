@@ -526,3 +526,7 @@ body {
 
 .form-signin .btn, .form-signup .btn {
   margin-bottom: 10px; }
+
+.fa-heart{
+  color: red;
+}
