@@ -48,7 +48,7 @@ div#card.one0:hover {
 div#card.one1:hover {
   background-color: blue;}
 div#card.one2:hover {
-  background-color: green;}
+  background-color: lime;}
 div#card.one3:hover {
   background-color: gold;}
 div#card.one4:hover {
@@ -56,15 +56,15 @@ div#card.one4:hover {
 div#card.one5:hover {
   background-color: blueviolet;}
 div#card.one6:hover {
-  background-color: lime;}
+  background-color: deepskyblue;}
 div#card.one7:hover {
-  background-color: pink;}
+  background-color: magenta;}
 div#card.one8:hover {
-  background-color: turquoise;}
+  background-color: silver;}
 div#card.one9:hover {
-  background-color: dimgray;}
+  background-color: turquoise;}
 div#card.one10:hover {
-  background-color: firebrick;}
+  background-color: green;}
 div#card.one11:hover {
   background-color: darksalmon;}
 div#card.one12:hover {
@@ -74,7 +74,7 @@ div#card.one13:hover {
 div#card.one14:hover {
   background-color: tomato;}
 div#card.one15:hover {
-  background-color: magenta;}
+  background-color: pink;}
 div#card.one16:hover {
   background-color: darkgreen;}
 div#card.one17:hover {
@@ -88,7 +88,7 @@ div#card.one20:hover {
 div#card.one21:hover {
   background-color: midnightblue;}
 div#card.one22:hover {
-  background-color: silver;}
+  background-color: dimgray;}
 div#card.one23:hover {
   background-color: aquamarine;}
 div#card.one24:hover {
@@ -97,7 +97,7 @@ div#card.one24:hover {
 button {
   border: solid white 2px;
   border-radius: 5px 5px 5px;
-  margin-top: 70px;
+  margin-top: 20px;
   font-size: 15px;
   height: 15%; }
 

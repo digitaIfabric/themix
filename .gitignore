@@ -56,13 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
-<<<<<<< HEAD
 .DS_Store
-=======
-
-.DS_Store
-
 .idea
 
 ./spotifyserver/node_modules/
->>>>>>> 4f319e5d6dbe933f3bbaa93f36f30b5fc439af80

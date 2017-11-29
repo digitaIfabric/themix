@@ -1,7 +1,7 @@
 .spotify {
     position: fixed;
     top: 25%;
-    left: 74.99999999%;
+    left: 75%;
     z-index: 2;
     height: 50%;
     width: 50%;
@@ -11,7 +11,7 @@
 }
 .youtube {
     position: fixed;
-    top: 74.9999999%;
+    top: 75%;
     left: 75%;
     z-index: 1;
     width: 50% !important;
@@ -50,7 +50,7 @@
 .chatbarusername {
     flex: 2; }
 main.messages {
-    padding-top: 100px;
+    padding-top: 88px;
 }
 .message {
     display: flex;
